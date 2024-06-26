@@ -1,0 +1,888 @@
+/*****GLOBAL STYLES*****/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+:root {
+  font-size: 62.5%;
+  --Blue: #345ff6;
+  --Gunmetal: #253347;
+  --DarkElectricBlue: #5e6e85;
+  --PureWhite: #ffffff;
+
+}
+
+* {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  width: 100vw;
+  background-color: var(--DarkElectricBlue);
+}
+
+
+
+h1 {
+  font-size: 6.4rem;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -3.2px;
+  color: var(--Gunmetal);
+}
+
+h2 {
+  font-size: 4.8rem;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -2.4px;
+  color: var(--Gunmetal);
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 110%;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  color: var(--Gunmetal);
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 110%;
+  font-weight: 600;
+  color: var(--Gunmetal);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--DarkElectricBlue);
+}
+
+.body-bold {
+  font-size: 1.6rem;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.body-small {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+
+/*****PAGE STYLES*****/
+#main {
+  width: 100vw;
+  max-width: 144rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding-left: 14rem;
+  background-color: var(--PureWhite);
+
+  @media (max-width: 1200px) {
+    padding: 0;
+  }
+}
+
+.rectangle {
+  width: 100vw;
+  max-width: 97.8rem;
+  height: 73.7rem;
+  position: absolute;
+  top: 0;
+  left: 2.4rem;
+  background-image: linear-gradient(290deg, #d6e6fe 0%, #d6fcfe 100%);
+  border-radius: 0 0 3.5rem 3.5rem;
+  z-index: -2;
+
+  @media (max-width: 1000px) {
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  @media (max-width: 375px) {
+    height: 64rem;
+  }
+
+}
+
+.logo {
+  position: absolute;
+  top: 7.5rem;
+  left: 14rem;
+
+  @media (max-width: 1200px) {
+    top: 3.2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+  }
+
+  @media (max-width:768px) {
+    height: 4rem;
+    width: 4rem;
+  }
+
+}
+
+
+#bmi-calculator {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 4.4rem 0 4rem
+  }
+
+  @media (max-width: 375px) {
+    padding: 0 2.4rem 0 2.4rem;
+  }
+}
+
+#bmi-info {
+  width: 56.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  margin: 19rem 0 0 0;
+
+  @media (max-width: 1200px) {
+    align-items: center;
+    gap: 6rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 11.2rem;
+    gap: 2.4rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 9.7rem;
+
+  }
+}
+
+.info-title {
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 4.8rem;
+    letter-spacing: -2.4px;
+  }
+}
+
+.info {
+  color: var(--DarkElectricBlue);
+  width: 46.5rem;
+
+  @media (max-width: 1200px) {
+    text-align: center;
+    width: 100%;
+    max-width: 68.6rem;
+  }
+}
+
+#bmi-input {
+  width: 56.4rem;
+  margin: 18.2rem 0 0 3.2rem;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  background-color: var(--PureWhite);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  border-radius: 1.6rem;
+
+  @media (max-width: 1200px) {
+    margin: 12rem 0 0 0;
+    width: 68.6rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+    margin: 4.6rem 2.4rem 0 2.4rem;
+    padding: 2.4rem;
+  }
+
+  @media (max-width: 375rem) {
+    gap: 2.5rem;
+  }
+}
+
+#units,
+#measurements-metric,
+#measurements-imperial {
+  border: none;
+}
+
+#units {
+  display: flex;
+  justify-content: space-between;
+}
+
+.unit-label {
+  display: inline-block;
+  font-family: "Inter";
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--Gunmetal);
+  width: 23.8rem;
+
+  @media (max-width: 1200px) {
+    width: 29.9rem;
+  }
+
+  @media (max-width: 700px) {
+    width: calc(100% - 2.4rem);
+  }
+}
+
+span.radio {
+  display: inline-block;
+  width: 3.1rem;
+  height: 3.1rem;
+  margin-right: 1.7rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+span.radio:hover {
+  border-color: var(--Blue);
+  opacity: 100%;
+}
+
+.unit {
+  margin-right: 1.8rem;
+  width: 3.1rem;
+  height: 3.1rem;
+  display: absolute;
+  top: -10px;
+  left: -10px;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.unit:hover {
+  opacity: 0;
+}
+
+.unit:checked {
+  opacity: 100%;
+  content: url("/assets/images/radio-button-active.svg");
+}
+
+#measurements-metric {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+
+  @media (max-width: 700px) {
+    gap: 0;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 1.6rem;
+    align-self: stretch;
+  }
+}
+
+#measurements-imperial {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.measure {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.measure-imperial {
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.weight-fields,
+.height-fields {
+  display: flex;
+  gap: 2.4rem;
+}
+
+
+div.group {
+  width: 50%;
+}
+
+.height,
+.weight {
+  width: 23.8rem;
+  height: 6.9rem;
+  border: 1px solid var(--DarkElectricBlue);
+  border-radius: 1.2rem;
+  padding: 2rem 2.4rem;
+  font-size: 2.4rem;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  font-weight: 600;
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    width: 29.9rem;
+  }
+
+  @media (max-width: 700px) {
+    width: calc(100% - 2.4rem);
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.height:hover,
+.weight:hover {
+  border-color: var(--Blue);
+}
+
+.placeholder {
+  position: absolute;
+  color: blue;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+
+  transform: translate(18rem, 4.6rem);
+
+  @media (max-width: 768px) {
+    transform: translate(32vw, 4.6rem);
+  }
+
+  @media (max-width: 600px) {
+    transform: translate(65vw, 4.6rem);
+  }
+
+  @media (max-width: 475px) {
+    transform: translate(58vw, 4.6rem);
+  }
+
+  @media (max-width: 375px) {
+    transform: translate(50vw, 4.6rem);
+  }
+}
+
+.placeholder-imperial-a {
+  position: absolute;
+  color: blue;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  transform-origin: 100% 50%;
+  transform: translate(20rem, 2rem);
+
+  @media (max-width: 768px) {
+    transform: translate(33vw, 2rem);
+  }
+
+  @media (max-width: 640px) {
+    transform: translate(20vw, 2rem);
+  }
+
+  @media (max-width: 375px) {
+    transform: translate(20vw, 2rem);
+  }
+
+}
+
+.placeholder-imperial-b {
+  position: absolute;
+  color: blue;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  transform-origin: 100% 50%;
+  transform: translate(45rem, 2rem);
+
+  @media (max-width: 768px) {
+    transform: translate(74vw, 2rem);
+  }
+
+  @media (max-width: 640px) {
+    transform: translate(60vw, 2rem);
+  }
+
+  @media (max-width: 375px) {
+    transform: translate(54vw, 2rem);
+  }
+}
+
+#report {
+  width: 50rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.4px;
+  padding: 3.2rem;
+  border-radius: 1.6rem 99.9rem 99.9rem 1.6rem;
+  background-color: var(--Blue);
+  color: var(--PureWhite);
+
+  @media (max-width: 1200px) {
+    width: 62.2rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 2.4rem;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 1.6rem;
+  }
+}
+
+.welcome-text {
+  margin-top: 1.6rem;
+}
+
+
+
+div.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .8rem;
+
+  @media (max-width: 600px) {
+    align-self: flex-start;
+  }
+}
+
+.white-text {
+  color: var(--PureWhite);
+}
+
+.score {
+  font-size: 6.4rem;
+  font-weight: 600;
+  width: 20.6rem;
+  line-height: 110%;
+  letter-spacing: -3.2px;
+  color: var(--PureWhite);
+
+  @media (max-width: 768px) {
+    font-size: 4.8rem;
+  }
+}
+
+.parameters {
+  width: 20.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  margin: .9rem 0 0 2.4rem;
+
+  @media (max-width: 600px) {
+    align-self: stretch;
+    width: unset;
+    margin: 0 0 0 0;
+  }
+}
+
+.range {
+  font-weight: bold;
+}
+
+.graphic-1 {
+  position: absolute;
+  top: 74.9rem;
+  right: 14%;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+#bmi-result {
+  margin-top: 19.1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 13.1rem;
+
+  @media (max-width: 1200px) {
+    gap: 10%;
+    margin-top: 9.6rem;
+    margin-right: 3vw;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    gap: 7.5rem;
+    margin-right: 4.3rem;
+    margin-left: -5rem;
+  }
+
+  @media (max-width: 640px) {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    gap: 0
+  }
+}
+
+.model {
+  width: 56.4rem;
+
+  @media (max-width:1000px) {
+    width: 43.5rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 36.1rem;
+    height: 41.1rem;
+    object-fit: cover;
+    border-radius: 3rem;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    height: auto;
+    max-width: 56.4rem;
+    min-width: 37.5rem;
+    margin-top: 7.2rem;
+
+  }
+}
+
+.meaning {
+  margin-top: 3.9rem;
+  max-width: 46.5rem;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 4.8rem;
+
+  }
+}
+
+.meaning-title {
+  @media (max-width: 768px) {
+    font-size: 3.2rem;
+    letter-spacing: -1.6px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0 2.4rem 0 2.3rem;
+  }
+}
+
+.meaning-text {
+  margin: 3.5rem 0 4rem 0;
+
+  @media (max-width: 768px) {
+    margin: 3.2rem 0 0 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0 2.4rem 0 2.3rem;
+    min-width: 32.8rem;
+  }
+}
+
+#bmi-tips {
+  display: flex;
+  justify-content: center;
+  justify-content: flex-start;
+  gap: 3.2rem;
+  margin-top: 9.6rem;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 15.6rem;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 12.7rem;
+    gap: 4.2rem;
+  }
+
+}
+
+.tip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 36.5rem;
+
+  @media (max-width: 1200px) {
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    margin: 4rem 4.3rem 0 3.9rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 4.3rem 0 3.9rem;
+    margin-top: 0;
+  }
+
+  @media (max-width: 460px) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2.8rem 0 1.9rem;
+  }
+
+  @media (max-width: 375px) {
+    width: 32.7rem;
+    padding: 2.4rem 2.4rem 2.4rem 2.4rem;
+  }
+}
+
+.tip-icon {
+  height: 6.4rem;
+  margin-top: 7.2rem;
+
+  @media (max-width: 1200px) {
+    margin: 0 4rem 0 0;
+  }
+
+  @media (max-width: 460px) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.tip-title {
+  margin-top: 4.5rem;
+
+  @media (max-width: 1200px) {
+    margin: 0 0 0 0;
+  }
+}
+
+.tip-text {
+  margin-top: 2.4rem;
+
+}
+
+#bmi-limitations {
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'limitations limitations limitations gender gender gender'
+    'graphic graphic age age muscle muscle'
+    'pregnancy pregnancy pregnancy race race race';
+  row-gap: 3.2rem;
+  column-gap: 3.2rem;
+  margin-top: 21rem;
+
+  @media (max-width:1230px) {
+    grid-template-areas: 'limitations limitations'
+      'gender age'
+      'muscle pregnancy'
+      'race race';
+    margin-top: 9.6rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 15.6rem;
+    row-gap: 2.4rem;
+    column-gap: 1.4rem;
+    padding: 0 5.2% 0 4.9%;
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9.6rem;
+    padding: 0;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 12.7rem;
+    gap: 1.5rem;
+  }
+}
+
+.limitations-text {
+  grid-area: limitations;
+  width: 56.4rem;
+  margin-right: 10rem;
+
+  @media (max-width:1230px) {
+    width: 89%;
+    justify-self: center;
+    text-align: center;
+    margin: 0 0 3.2rem 0;
+  }
+
+  @media (max-width: 700px) {
+    width: 87%;
+  }
+}
+
+.limit-title {
+  margin-bottom: 3.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 3.2rem;
+    letter-spacing: -1.6px;
+    margin-bottom: 3.2rem;
+  }
+
+  @media (max-width: 375px) {
+    margin-bottom: 1.6 rem;
+  }
+}
+
+.limit {
+  display: flex;
+  flex-direction: column;
+  width: 36.5rem;
+  padding: 3.2rem;
+  border-radius: 16px;
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+
+  @media (max-width: 768px) {
+    width: 33.6rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 87%;
+  }
+
+  @media (max-width: 375px) {
+    width: 32.7rem;
+    padding: 2.4rem;
+  }
+}
+
+.icon-title {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.gender {
+  grid-area: gender;
+  justify-self: flex-start;
+  transform: translate(-2rem);
+
+  @media (max-width:1230px) {
+    justify-self: center;
+    transform: translate(0);
+  }
+
+  @media (max-width:375px) {
+    height: 21.6rem;
+  }
+}
+
+.age {
+  grid-area: age;
+  transform: translate(1rem);
+
+  @media (max-width:1230px) {
+    justify-self: center;
+    transform: translate(0);
+  }
+}
+
+.muscle {
+  grid-area: muscle;
+  justify-self: flex-start;
+  transform: translate(-12.7rem);
+
+  @media (max-width:1230px) {
+    justify-self: center;
+    transform: translate(0);
+  }
+}
+
+.pregnancy {
+  grid-area: pregnancy;
+  justify-self: center;
+  margin-left: 6.5rem;
+
+  @media (max-width:1230px) {
+    margin: 0;
+  }
+}
+
+.race {
+  grid-area: race;
+  transform: translate(-12.5rem);
+
+  @media (max-width:1230px) {
+    justify-self: center;
+    transform: translate(0);
+    width: 36.5rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 87%;
+  }
+}
+
+
+.graphic-2 {
+  grid-area: graphic;
+  justify-self: center;
+  transform: translate(2rem);
+
+  @media (max-width: 1230px) {
+    display: none;
+  }
+}
